@@ -368,29 +368,33 @@ sortingBtn.forEach((button, index) => {
 // 	функція виводиту водального вікна кожного тренера 
 
 function showModal(trainer) {
-	const modalTemplate = document.querySelector('#modal-template').content.cloneNode(true);
-	document.body.appendChild(modalTemplate);
-	const modal = document.querySelector('.modal');
-	// Наповнюємо кожну картку тренера інформацією з масиву
-	modal.querySelector('.modal__img').src = trainer.photo;
-	modal.querySelector('.modal__name').textContent = trainer["first name"] + " " + trainer["last name"];
-	modal.querySelector('.modal__point--category').textContent = "Категорія: " + trainer.category.toUpperCase();
-	modal.querySelector('.modal__point--experience').textContent = "Досвід: " + trainer.experience;
-	modal.querySelector('.modal__point--specialization').textContent = "Напрям тренера: " + trainer.specialization.toUpperCase();
-	modal.querySelector('.modal__text').textContent = trainer.description;
+    const modalTemplate = document.querySelector('#modal-template').content.cloneNode(true);
+    document.body.appendChild(modalTemplate);
+    const modal = document.querySelector('.modal');
+    // Наповнюємо кожну картку тренера інформацією з масиву
+    modal.querySelector('.modal__img').src = trainer.photo;
+    modal.querySelector('.modal__name').textContent = trainer["first name"] + " " + trainer["last name"];
+    modal.querySelector('.modal__point--category').textContent = "Категорія: " + trainer.category.toUpperCase();
+    modal.querySelector('.modal__point--experience').textContent = "Досвід: " + trainer.experience;
+    modal.querySelector('.modal__point--specialization').textContent = "Напрям тренера: " + trainer.specialization.toUpperCase();
+    modal.querySelector('.modal__text').textContent = trainer.description;
 
-	// Відключаємо скрол сторінки додаємо стиль overflow: hidden
-	document.body.style.overflow = 'hidden';
+    // Відключаємо скрол сторінки додаємо стиль overflow: hidden
+    document.body.style.overflow = 'hidden';
 
+    modal.querySelector('.modal__close').addEventListener('click', function() {
+        modal.remove();
+        document.body.style.overflow = '';
+    });
 
-
-	modal.querySelector('.modal__close').addEventListener('click', function() {
-		modal.remove();
-		// Повертаємо скрол сторінки - очущеємо overflow
-		document.body.style.overflow = '';
-	});
+    // Додаємо закриття по кліку поза модалкою
+    modal.addEventListener('mousedown', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+            document.body.style.overflow = '';
+        }
+    });
 }
-
 
 
 // Функція для отримання тексту з радіо-кнопок
