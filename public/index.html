@@ -1,89 +1,250 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fitnes First</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.7.3/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.7.3/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.7.3/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./favicons/apple-touch-icon.jpg"
+		/>
+		<link
+			rel="icon"
+			type="image/jpg"
+			sizes="32x32"
+			href="./favicons/favicon-32x32.jpg"
+		/>
+		<link
+			rel="icon"
+			type="image/jpg"
+			sizes="16x16"
+			href="./favicons/favicon-16x16.jpg"
+		/>
+		<link rel="icon" type="image/x-icon" href="./favicons/favicon.ico" />
+		<link rel="manifest" href="./favicons/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="./favicons/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#2b5797" />
+		<meta name="theme-color" content="#473a3a" />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+		<link rel="stylesheet" href="./css/index.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="page-header">
+			<a href="index.html" class="logo">
+				<img
+					src="./img/logo.png"
+					alt=""
+					class="logo__img"
+					width="200"
+					height="39"
+				/>
+			</a>
+		</header>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+		<div class="page-wrapper">
+			<main class="page-main">
+				<section class="sorting" hidden>
+					<p class="sorting__element sorting__title">СОРТУВАТИ:</p>
+
+					<button
+						class="sorting__element sorting__btn sorting__btn--active"
+						type="button"
+:
+					>
+						ЗА замовчуванням
+					</button>
+
+					<button class="sorting__element sorting__btn" type="button">
+						ЗА ПРІЗВИЩЕМ
+					</button>
+
+					<button class="sorting__element sorting__btn" type="button">
+						ЗА ДОСВІДОМ
+					</button>
+				</section>
+
+				<section class="trainers-cards">
+					<ul class="trainers-cards__container">
+						<!-- Контейнер для карток тренерів -->
+					</ul>
+				</section>
+			</main>
+
+			<aside class="sidebar" hidden>
+				<form class="sidebar__filters filters">
+					<fieldset class="filters__fieldset">
+						<legend class="filters__legend">НАПРЯМИ</legend>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="direction"
+							id="all-direction"
+							value="all"
+							checked
+						/>
+						<label for="all-direction" class="filters__label"> ВСІ </label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="direction"
+							id="gym"
+							value="gym"
+						/>
+						<label for="gym" class="filters__label"> ТРЕНАЖЕРНИЙ ЗАЛ </label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="direction"
+							id="fight-club"
+							value="fight club"
+						/>
+						<label for="fight-club" class="filters__label">
+							БІЙЦІВСЬКИЙ КЛУБ
+						</label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="direction"
+							id="kids-club"
+							value="kids club"
+						/>
+						<label for="kids-club" class="filters__label"> ДИТЯЧИЙ КЛУБ </label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="direction"
+							id="swimming-pool"
+							value="swimming pool"
+						/>
+						<label for="swimming-pool" class="filters__label"> БАСЕЙН </label>
+					</fieldset>
+
+					<fieldset class="filters__fieldset">
+						<legend class="filters__legend">КАТЕГОРІЇ</legend>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="category"
+							id="all-category"
+							value="all"
+							checked
+						/>
+						<label for="all-category" class="filters__label"> ВСІ </label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="category"
+							id="master"
+							value="master"
+						/>
+						<label for="master" class="filters__label"> МАЙСТЕР </label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="category"
+							id="specialist"
+							value="specialist"
+						/>
+						<label for="specialist" class="filters__label"> СПЕЦІАЛІСТ </label>
+
+						<input
+							class="filters__input"
+							type="radio"
+							name="category"
+							id="instructor"
+							value="instructor"
+						/>
+						<label for="instructor" class="filters__label"> ІНСТРУКТОР </label>
+					</fieldset>
+
+					<input type="submit" value="ПОКАЗАТИ" class="filters__submit" />
+				</form>
+			</aside>
+		</div>
+
+		<footer class="page__footer">
+			<p class="copyright">&copy; Fitness First</p>
+		</footer>
+
+		<template id="modal-template">
+			<div class="modal">
+				<div class="modal__body">
+					<img
+						src="./img/trainers/trainer-m1.jpg"
+						alt=""
+						class="modal__img"
+						width="280"
+						height="360"
+					/>
+					<div class="modal__description">
+						<p class="modal__name">Мануйленко Артем</p>
+						<p class="modal__point modal__point--category">
+							Категорія: інструктор
+						</p>
+						<p class="modal__point modal__point--experience">Досвід: 8 років</p>
+						<p class="modal__point modal__point--specialization">
+							Напрям тренера: Тренажерний зал
+						</p>
+						<p class="modal__text">
+							Артем спеціалізується на функціональному тренуванні. Він розробив
+							власну систему вправ для зміцнення корпусу. Його учні завжди
+							отримують видимі результати.
+						</p>
+					</div>
+
+					<button class="modal__close">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="30"
+							height="30"
+							viewBox="0 0 72 72"
+						>
+							<path
+								d="M 19 15 C 17.977 15 16.951875 15.390875 16.171875 16.171875 C 14.609875 17.733875 14.609875 20.266125 16.171875 21.828125 L 30.34375 36 L 16.171875 50.171875 C 14.609875 51.733875 14.609875 54.266125 16.171875 55.828125 C 16.951875 56.608125 17.977 57 19 57 C 20.023 57 21.048125 56.609125 21.828125 55.828125 L 36 41.65625 L 50.171875 55.828125 C 51.731875 57.390125 54.267125 57.390125 55.828125 55.828125 C 57.391125 54.265125 57.391125 51.734875 55.828125 50.171875 L 41.65625 36 L 55.828125 21.828125 C 57.390125 20.266125 57.390125 17.733875 55.828125 16.171875 C 54.268125 14.610875 51.731875 14.609875 50.171875 16.171875 L 36 30.34375 L 21.828125 16.171875 C 21.048125 15.391875 20.023 15 19 15 z"
+							></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</template>
+
+		<template id="trainer-card">
+			<li class="trainer">
+				<img
+					src="./img/trainers/trainer-m12.png"
+					alt=""
+					class="trainer__img"
+					width="280"
+					height="300"
+				/>
+				<p class="trainer__name">Мануйленко Артем</p>
+
+				<button class="trainer__show-more" type="button">ПОКАЗАТИ</button>
+			</li>
+		</template>
+
+		<script src="./js/index.js"></script>
+	</body>
 </html>
+
